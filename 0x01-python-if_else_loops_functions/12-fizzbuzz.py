@@ -22,4 +22,4 @@ def fizzbuzz():
         if i != 100:
             print(" ", end='')
 
-        print(" ", end='')
+    print(" ", end='')
