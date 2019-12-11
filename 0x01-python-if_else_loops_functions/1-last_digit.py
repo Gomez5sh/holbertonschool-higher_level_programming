@@ -12,4 +12,4 @@ if i > 5:
 elif i == 0:
     print("Last digit of {0} is {1} and is 0".format(number, i))
 elif i < 6 and i != 0:
-    print("Last digit of {0} is {1}\ and is less than 6 and not 0".format(number, i))
+    print("Last digit of", number, "is", i, "and is less than 6 and not 0")
