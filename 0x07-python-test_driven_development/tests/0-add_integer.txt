@@ -1,0 +1,35 @@
+========================
+TEST for add_integer Fun
+=======================
+
+add_integer(a, b)
+return the sum of the two integers
+the funtion must be int or float argv, otherwise an error is raised.
+
+Funtion
+
+  >>> add_integer = __import__("0-add_integer").add-integer
+
+  >>> add_integer(-2, 3)
+  1
+
+  >>> add_integer(2)
+  100
+
+  >>> add_integer(-2.0, 3.0)
+  1
+
+  >>> add_integer(2.0, 3.0)
+  -1
+
+  >>> add_integer('a', 30)
+  Traceback (most recent call last):
+  TypeError(a must be an integer)
+
+  >>> add_integer('Holberton', 2)
+  Traceback (most recent call last):
+  TypeError(a must be an integer)
+
+  >>> add_integer(1, "b")
+  Traceback (most recent call last):
+  TypeError(b must be an integer)
