@@ -1,6 +1,6 @@
-##0x08. Python - More Classes and Objects
+## 0x08. Python - More Classes and Objects
 
-#General
+# General
 Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
 What is OOP
 “first-class everything”
