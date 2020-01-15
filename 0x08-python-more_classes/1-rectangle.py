@@ -1,35 +1,31 @@
 #!/usr/bin/pithon3
 class Rectangle:
-
     def __init__(self, width=0, height=0):
-        """Init method variables"""
-        self.height = height
-        self.width = width
+        self.__width = width
+        self.__height = height
 
-    """Wigth"""
-    @property
-    def width(self):
-            w = self.__width
-            return w
-
-    @width.setter
-    def width(self, value):
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-        elif value < 0:
-            raise TypeError("width must be >= 0")
-        self.__width = value
-
-    """Height"""
     @property
     def height(self):
-        h = self.__height
-        return h
+        return self.__height
 
     @height.setter
     def height(self, value):
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
+        if type(value) == int and value >= 0:
+            self.__height = value
+        elif type(value) != int:
+            raise NameError("height must be an integer")
         elif value < 0:
-            raise TypeError("height must be >= 0")
-        self.__height = value
+            raise NameError("height must be >= 0")
+
+    @property
+    def width(self):
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        if type(value) == int and value >= 0:
+            self.__width = value
+        elif type(value) != int:
+            raise NameError("width must be an integer")
+        elif value < 0:
+            raise NameError("width must be >= 0")
