@@ -44,7 +44,7 @@ class Rectangle:
             self.__perimeter = 0
         else:
             self.__perimeter = 2 * (self.__width + self.__height)
-        return self.__perimeter
+            return self.__perimeter
 
     def __str__(self):
         sq = []
