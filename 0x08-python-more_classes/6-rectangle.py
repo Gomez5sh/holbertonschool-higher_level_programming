@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 class Rectangle:
 
-    number_of_intances = 0
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -44,7 +44,7 @@ class Rectangle:
             self.__perimeter = 0
         else:
             self.__perimeter = 2 * (self.__width + self.__height)
-            return self.__perimeter
+        return self.__perimeter
 
     def __str__(self):
         sq = []
@@ -58,5 +58,5 @@ class Rectangle:
         return ("Rectangle({}, {})".format(self.__width, self.__height))
 
     def __del__(self):
-        print ("Bye rectangle...")
+        print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
