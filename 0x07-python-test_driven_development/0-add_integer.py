@@ -8,5 +8,5 @@ def add_integer(a, b=98):
     elif type(b) != float and type(b) != int:
         raise TypeError("b must be an integer")
     else:
-        sum =  int(a) + int(b)
+        sum = int(a) + int(b)
         return sum
