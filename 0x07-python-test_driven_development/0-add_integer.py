@@ -4,9 +4,9 @@ def add_integer(a, b=98):
     b and a = int
     """
 
-    if not isinstance(a (int, float)):
-        raise TypeError("a must be an intege")
-    elif not isinstance(b (int, float)):
+    if type (a) != float and type (a) != int:
+        raise TypeError("a must be an integer")
+    elif type (b) != float and type (b) != int:
         raise TypeError("b must be an integer")
     else:
         sum = (int(a) + int(b))
