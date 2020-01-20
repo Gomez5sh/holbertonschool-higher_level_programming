@@ -52,12 +52,12 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return ''
         else:
-            sq = "{}".format(self.__print_symbol) * self.__width
+            sq = "{}".format(self.print_symbol) * self.__width
             return '\n'.join(sq for n in range(self.__height))
 
     def __repr__(self):
         return ("Rectangle({}, {})".format(self.__width, self.__height))
 
     def __del__(self):
-        print ("Bye rectangle...")
+        print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
