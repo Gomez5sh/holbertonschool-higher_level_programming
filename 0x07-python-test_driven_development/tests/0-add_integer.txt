@@ -19,10 +19,13 @@ Funtion
   >>> add_integer(10, -5)
   5
 
+  >>> add_integer(100.3, -2)
+  98
+
   >>> add_integer('a', 30)
-  Traceback (most recent call last):
+  Traceback(most recent call last):
   TypeError: a must be an integer
 
   >>> add_integer(None)
-  Traceback (most recent call last):
+  Traceback(most recent call last):
   TypeError: a must be an integer
