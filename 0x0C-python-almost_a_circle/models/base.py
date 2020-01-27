@@ -5,7 +5,7 @@ Base module
 
 
 import json
-import csv
+import os
 
 
 class Base:
@@ -66,22 +66,21 @@ class Base:
             n = cls(1, 1)
         elif cls.__name__ == "Square":
             n = cls(1)
-            n.update(**dictionary)
-            return n
+        n.update(**dictionary)
+        return n
 
     def load_from_file(cls):
         """
         returns a list of instances of cls
         """
-        my_list = []
-        filename = '{}.csv'.format(cls.__name__)
-        try:
-            with open(filename, 'r') as f:
-                reader = csv.DictReader(f)
-                for row in reader:
-                    for key, val in row.items():
-                        row[key] = int(val)
-                        my_list.append(row)
-            return([cls.create(**x) for x in my_list])
-        except FileNotFoundError:
-            return([[]])
+        new_list = []
+        name = cls.__name__ + ".json"
+        if os.path.isfile(name):
+            with open(name, 'r') as file:
+                read_line = file.read()
+                list_from_clsdict = cls.from_json_string(read_line)
+                for line in list_from_clsdict:
+                    new_list.append(cls.create(**line))
+                return new_list
+        else:
+            return new_list
