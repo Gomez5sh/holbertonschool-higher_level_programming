@@ -44,9 +44,9 @@ class Square(Rectangle):
                 if y == 3:
                     self.y = args[3]
 
-            if kwargs:
-                for key, value in kwargs.items():
-                    setattr(self, key, value)
+        if kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """ Square  Dictionary"""
