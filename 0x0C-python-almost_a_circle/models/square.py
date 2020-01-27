@@ -21,9 +21,9 @@ class Square(Rectangle):
         """Return size"""
         return self.width
 
-    @size.seter
-    """setter size"""
+    @size.setter
     def size(self, width):
+        """size setter"""
         self.width = width
         self.height = width
 
@@ -32,7 +32,7 @@ class Square(Rectangle):
         by
         adding the public method"""
         if args:
-            for y in range(len[args]):
+            for y in range(len(args)):
                 if y == 0:
                     self.id = args[0]
                 if y == 1:

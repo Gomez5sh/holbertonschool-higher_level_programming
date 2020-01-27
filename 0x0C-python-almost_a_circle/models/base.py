@@ -30,10 +30,10 @@ class Base:
         """Return JSON dic"""
         new = []
         file = cls.__name__ + ".json"
-
         if list_objs:
             for n in list_objs:
                 new.append(n.to_dictionary())
 
-        with open(file, mode="w", encoding="utf-8") as new_file:
-            new_file.write(cls.to_dictionary(new))
+        tmp = cls.to_json_string(new)
+        with open(file, "w", encoding="utf-8") as new_file:
+            new_file.write(tmp)
