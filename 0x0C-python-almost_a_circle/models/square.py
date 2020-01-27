@@ -54,5 +54,5 @@ class Square(Rectangle):
         keys = ['id', 'size', 'x', 'y']
 
         for ite in keys:
-            dic[ite] = getattr(self, ite)
+            dic.update({ite: getattr(self, ite)})
         return dic

@@ -49,6 +49,7 @@ class Base:
         with open(file, "w", encoding="utf-8") as new_file:
             new_file.write(tmp)
 
+    @staticmethod
     def from_json_string(json_string):
         """
         return list from JSON
@@ -58,6 +59,7 @@ class Base:
         else:
             return json.loads(json_string)
 
+    @classmethod
     def create(cls, **dictionary):
         """
         Dictionary to Instance
@@ -69,6 +71,7 @@ class Base:
         n.update(**dictionary)
         return n
 
+    @classmethod
     def load_from_file(cls):
         """
         returns a list of instances of cls
