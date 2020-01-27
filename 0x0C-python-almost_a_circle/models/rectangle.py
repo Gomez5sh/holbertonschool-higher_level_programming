@@ -94,23 +94,24 @@ class Rectangle(Base):
         return('[Rectangle] ({}) {}/{} - {}/{}'
                .format(self.id, self.x, self.y, self.width, self.height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """assigns arguments"""
         if args:
-            for x in range(len(args)):
-                if n == 0:
+            for i in range(len(args)):
+                if i == 0:
                     self.id = args[0]
-                if n == 1:
+                if i == 1:
                     self.width = args[1]
-                if n == 2:
+                if i == 2:
                     self.height = args[2]
-                if n == 3:
+                if i == 3:
                     self.x = args[3]
-                if n == 4:
+                if i == 4:
                     self.y = args[4]
-            if kwargs:
-                for key, value in kwargs.items():
-                    setattr(self, key, value)
+
+        if kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """Class dictionary"""
