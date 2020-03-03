@@ -1,4 +1,4 @@
---creates a table
+-- creates a table
 CREATE TABLE IF NOT EXISTS force_name
-       	     (id INT,
-	      name VARCHAR(256) NOT NULL);
+(id INT,
+name VARCHAR(256) NOT NULL);
