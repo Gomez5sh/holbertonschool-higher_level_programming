@@ -16,13 +16,11 @@ if __name__ == "__main__":
                          port=3306)
 
     cur = db.cursor()
-    cur.execute("SELECT id, name FROM states WHERE name RLIKE '^N|^n'\
-        ORDER BY states.id ASC;")
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
 
-    cur2 = cur.fetchall()
-
-    for dbi in cur2:
-        print(dbi)
+    for dbi in cur.fetchall():
+        if dbi[1][0] == 'N':
+            print(dbi)
 
     cur.close()
     db.close()
