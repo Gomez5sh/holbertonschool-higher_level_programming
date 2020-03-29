@@ -3,7 +3,12 @@
 from sys import argv
 import MySQLdb
 
-if len(argv) -1 == 3:
+
+
+def sqlmain(argv):
+    if len(argv) -1 != 3:
+        print("You must enter 3 arguments")
+        return
 
     db = MySQLd.connect(host="localhost",
                         user=argv[1],
@@ -11,11 +16,14 @@ if len(argv) -1 == 3:
                         db=argv[3],
                         port=3306)
     cur = db.cursor()
-
     cur.execute("SELECT id, name FROM states ORDER BY id  ASC;")
 
     for dbi in cur.fetchall():
         print(dbi)
 
-    else:
-        pass
+    db.close()
+
+if __name__=="__main__":
+
+    import sys
+    sqlmain(sys.argv)
