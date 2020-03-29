@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """
 Print names that start with n
