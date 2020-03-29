@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """lists all states from the database hbtn_0e_0_usa"""
-from sys import argv
+import sys
 import MySQLdb
 
 
 
 def sqlmain(argv):
+
     if len(argv) -1 != 3:
         print("You must enter 3 arguments")
         return
