@@ -19,7 +19,7 @@ if __name__ == "__main__":
         id = data.get('id')
         name = data.get('name')
 
-        if id and name is None:
+        if id is None or name is None:
             print("No result")
         else:
             print("[{}] : {}".format(id, name))
