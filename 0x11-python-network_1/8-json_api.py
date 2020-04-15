@@ -13,9 +13,10 @@ if __name__ == "__main__":
         rep = ""
 
     data = {'q': rep}
-    url = requests.post('http://0.0.0.0:5000/search_user', data=data)
+    url = http://0.0.0.0:5000/search_user
     try:
-        data = url.json()
+        res = requests.post(url, data=data)
+        data = res.json()
         if data:
             print("[{}] : {}".format(data.get('id'), data.get('name')))
         else:
