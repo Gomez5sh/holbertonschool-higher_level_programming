@@ -12,12 +12,12 @@ if __name__ == "__main__":
     except:
         rep = ""
 
-    payload = {'q': rep}
-    url = requests.post('http://0.0.0.0:5000/search_user', payload=payload)
+    data = {'q': rep}
+    url = requests.post('http://0.0.0.0:5000/search_user', data=data)
     try:
-        payload = data.json()
-        id = payload.get('id')
-        name = payload.get('name')
+        data = url.json()
+        id = data.get('id')
+        name = data.get('name')
 
         if id and name is None:
             print("No result")
