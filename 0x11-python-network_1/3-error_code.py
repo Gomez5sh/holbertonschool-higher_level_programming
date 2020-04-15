@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Python script that takes in a URL, sends a request to the URL and displays the body of the response """
+"""Python script that takes in a URL"""
 import urllib.request
 import sys
 
