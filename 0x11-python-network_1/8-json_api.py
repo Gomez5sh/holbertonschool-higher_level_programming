@@ -7,18 +7,18 @@ import sys
 
 
 if __name__ == "__main__":
-    try:
-        rep = sys.argv[1]
-    except:
-        rep = ""
+    if len(sys.argv) > 1:
+        query = {'q': sys.argv[1]}
+    else:
+        query = {'q': ""}
 
-    data = {'q': rep}
-    url = http://0.0.0.0:5000/search_user
+    url = "http://0.0.0.0:5000/search_user"
+
     try:
-        res = requests.post(url, data=data)
-        data = res.json()
-        if data:
-            print("[{}] : {}".format(data.get('id'), data.get('name')))
+        resp = requests.post(url, data=query)
+        content = resp.json()
+        if content:
+            print("[{}] {}".format(content.get('id'), content.get('name')))
         else:
             print("No result")
     except ValueError:
