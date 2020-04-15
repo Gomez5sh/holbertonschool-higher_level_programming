@@ -18,10 +18,9 @@ if __name__ == "__main__":
         data = url.json()
         id = data.get('id')
         name = data.get('name')
-
         if id is None or name is None:
             print("No result")
         else:
             print("[{}] : {}".format(id, name))
-    except:
+    except ValueError:
         print("Not a valid JSON")
