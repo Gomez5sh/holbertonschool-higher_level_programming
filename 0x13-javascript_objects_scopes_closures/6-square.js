@@ -2,7 +2,7 @@
 /*
 Write a class Square
 */
-const Rectangle = require('./4-rectangle');
+const Rectangle = require('./5-square');
 
 module.exports = class Square extends Rectangle {
   constructor (size) {
